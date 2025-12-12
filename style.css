@@ -1,0 +1,120 @@
+/* ====== BASE ====== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eaffea;  
+    color: #1f4d1f;
+}
+
+/* ====== HERO ====== */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 25px;
+    background: #caffca;
+    animation: fadeIn 1.2s ease;
+    justify-content: center;
+}
+
+/* FOTO PROFIL + ANIMASI NGAMBANG */
+.foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 10%;
+    object-fit: cover;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* TEXT HERO */
+.hero-text h1 {
+    margin: 0;
+    font-size: 2.3rem;
+}
+
+/* ====== SECTION ====== */
+.section {
+    width: 90%;
+    max-width: 700px; 
+    margin: 30px auto;
+    padding: 30px 25px;
+    background: #ffffff80;
+    border-radius: 12px;
+    animation: slideUp 1s ease; 
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+/* ====== PROJECTS ====== */
+.project-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: nowrap; 
+}
+
+.project-item {
+    text-align: center;
+}
+
+/* FOTO PROJECT (UKURAN SEDANG + ANIMASI) */
+.project-card {
+    width: 180px;
+    height: 130px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ZOOM HOVER */
+.project-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ZOOM KLIK */
+.project-card:active {
+    transform: scale(1.15);
+}
+
+/* TITLE PROJECT */
+.project-title {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #caffca;
+    margin-top: 30px;
+    animation: softGlow 2s infinite alternate; 
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes softGlow {
+    from {background: #caffca;}
+    to {background: #b6ffb6;}
+}
